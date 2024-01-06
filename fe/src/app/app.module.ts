@@ -10,19 +10,40 @@ import vi from '@angular/common/locales/vi';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { HeaderComponent } from './components/client/header/header.component';
+import { FooterComponent } from './components/client/footer/footer.component';
+import { CardComponent } from './components/client/card/card.component';
+import { ListCardComponent } from './components/client/list-card/list-card.component';
+import { HomeComponent } from './pages/client/home/home.component';
+import { DetailComponent } from './pages/client/detail/detail.component';
+import { WatchComponent } from './pages/client/watch/watch.component';
+import { DefaultLayoutComponent } from './layout/default-layout/default-layout.component';
+import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
+import { ClientLayoutComponent } from './layout/client-layout/client-layout.component';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 registerLocaleData(vi);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    CardComponent,
+    ListCardComponent,
+    HomeComponent,
+    DetailComponent,
+    WatchComponent,
+    DefaultLayoutComponent,
+    AdminLayoutComponent,
+    ClientLayoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NzIconModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: vi_VN }

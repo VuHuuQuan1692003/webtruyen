@@ -1,0 +1,12 @@
+.divider {
+    width: 0px;
+    height: 241px;
+    border: 2px solid #EDEDF8;
+    margin-top: 60px;
+    margin-left: 100px;
+    margin-right: 30px;
+}
+
+.info {
+    font-family: Noto Sans SC;
+}

@@ -3,3 +3,4 @@
 @tailwind components;
 @tailwind utilities;
 @import "~ng-zorro-antd/ng-zorro-antd.min.css";
+@import '~@fortawesome/fontawesome-free/css/all.css';

@@ -1,0 +1,27 @@
+.top-header a {
+    font-size: 14px;
+    color: #4d5168;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.orther-info a {
+    color: #4d5168;
+    cursor: pointer;
+}
+
+#publish a {
+    color: #fff;
+    padding: 0 24px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    background-color: #ff5454;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+#publish a:hover {
+    background-color: red;
+}
