@@ -21,8 +21,9 @@ import { DefaultLayoutComponent } from './layout/default-layout/default-layout.c
 import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
 import { ClientLayoutComponent } from './layout/client-layout/client-layout.component';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { BannerComponent } from './pages/client/home/components/banner/banner.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 registerLocaleData(vi);
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ registerLocaleData(vi);
     WatchComponent,
     DefaultLayoutComponent,
     AdminLayoutComponent,
-    ClientLayoutComponent
+    ClientLayoutComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
@@ -43,10 +45,12 @@ registerLocaleData(vi);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NzIconModule
+    NzIconModule,
+    SlickCarouselModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: vi_VN }
+
   ],
   bootstrap: [AppComponent]
 })

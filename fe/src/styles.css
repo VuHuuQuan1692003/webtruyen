@@ -4,3 +4,17 @@
 @tailwind utilities;
 @import "~ng-zorro-antd/ng-zorro-antd.min.css";
 @import '~@fortawesome/fontawesome-free/css/all.css';
+
+.slick-prev:before,
+.slick-next:before {
+    color: #ff5454 !important;
+}
+
+/* Chọn phần tử dots của carousel */
+
+
+.slick-dots li button:before {
+    color: #ff5454 !important;
+}
+
+/* Hiệu ứng hover khi di chuột lên nút dots */
