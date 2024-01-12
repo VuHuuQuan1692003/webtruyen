@@ -1,0 +1,9 @@
+<ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+    <div ngxSlickItem *ngFor="let slide of slides" class="slide w-full">
+        <img class="mx-auto" src="{{ slide.img }}" alt="">
+    </div>
+</ngx-slick-carousel>
+
+
+<!-- <button (click)="slickModal.slickGoTo(1)">slickGoto 2</button>
+<button (click)="slickModal.unslick()">unslick</button> -->
