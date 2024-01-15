@@ -23,6 +23,8 @@ import { ClientLayoutComponent } from './layout/client-layout/client-layout.comp
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { BannerComponent } from './pages/client/home/components/banner/banner.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
 registerLocaleData(vi);
 @NgModule({
   declarations: [
@@ -47,6 +49,8 @@ registerLocaleData(vi);
     BrowserAnimationsModule,
     NzIconModule,
     SlickCarouselModule,
+    NzBreadCrumbModule,
+    NzLayoutModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: vi_VN }
