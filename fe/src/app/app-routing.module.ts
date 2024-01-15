@@ -17,7 +17,6 @@ const routes: Routes = [
           { path: "detail/:id", component: DetailComponent },
           { path: "watch/:id", component: WatchComponent },
 
-
         ]
       },
       {
