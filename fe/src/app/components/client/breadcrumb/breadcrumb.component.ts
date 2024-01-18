@@ -5,7 +5,6 @@ import { Location } from '@angular/common';
 import { BreadcrumbService } from './breadcrumb.service';
 import { BreadcrumbItem } from './breadcrumb';
 
-
 @Component({
   selector: 'app-breadcrumb',
   templateUrl: './breadcrumb.component.html',
@@ -14,6 +13,7 @@ import { BreadcrumbItem } from './breadcrumb';
 export class BreadcrumbComponent implements OnInit {
   breadcrumbs: BreadcrumbItem[] = [];
   hidden: boolean = false;
+
   constructor(
     private breadcrumbService: BreadcrumbService,
     private router: Router,
@@ -23,16 +23,14 @@ export class BreadcrumbComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe((event) => {
-      console.log(event);
       this.breadcrumbService.updateBreadcrumbFromRoute(this.activatedRoute);
-      console.log(this.router.url);
 
-      if (this.router.url == '/') {
+      // Check if the current route is '/'
+      if (this.router.url === '/') {
         this.hidden = true;
       } else {
         this.hidden = false;
       }
-
     });
 
     this.breadcrumbService.breadcrumb$.subscribe((breadcrumb) => {
