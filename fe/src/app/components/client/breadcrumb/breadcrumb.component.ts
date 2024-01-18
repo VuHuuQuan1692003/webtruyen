@@ -12,25 +12,27 @@ import { BreadcrumbItem } from './breadcrumb';
 })
 export class BreadcrumbComponent implements OnInit {
   breadcrumbs: BreadcrumbItem[] = [];
-  hidden: boolean = false;
+  hidden: boolean | undefined = false;
 
   constructor(
     private breadcrumbService: BreadcrumbService,
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private location: Location
-  ) { }
+  ) {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      const urlTree = this.router.parseUrl(this.router.url);
+      const primarySegment = urlTree.root.children['primary'];
+      this.hidden = primarySegment && primarySegment.segments && primarySegment.segments.length > 0;
+    });
+
+  }
 
   ngOnInit(): void {
     this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe((event) => {
       this.breadcrumbService.updateBreadcrumbFromRoute(this.activatedRoute);
-
-      // Check if the current route is '/'
-      if (this.router.url === '/') {
-        this.hidden = true;
-      } else {
-        this.hidden = false;
-      }
     });
 
     this.breadcrumbService.breadcrumb$.subscribe((breadcrumb) => {
