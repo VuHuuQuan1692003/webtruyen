@@ -25,6 +25,8 @@ import { BannerComponent } from './pages/client/home/components/banner/banner.co
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { BreadcrumbComponent } from './components/client/breadcrumb/breadcrumb.component';
 registerLocaleData(vi);
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ registerLocaleData(vi);
     DefaultLayoutComponent,
     AdminLayoutComponent,
     ClientLayoutComponent,
-    BannerComponent
+    BannerComponent,
+    BreadcrumbComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +54,7 @@ registerLocaleData(vi);
     SlickCarouselModule,
     NzBreadCrumbModule,
     NzLayoutModule,
+    NzDividerModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: vi_VN }
