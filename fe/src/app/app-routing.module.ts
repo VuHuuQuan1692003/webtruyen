@@ -9,27 +9,19 @@ import { DetailComponent } from './pages/client/detail/detail.component';
 
 const routes: Routes = [
   {
-    path: '', component: DefaultLayoutComponent, children: [
-      {
-        path: "", component: ClientLayoutComponent, children: [
-          { path: "", redirectTo: 'home', pathMatch: 'full' },
-          { path: "home", component: HomeComponent },
-          { path: "detail/:id", component: DetailComponent },
-          { path: "watch/:id", component: WatchComponent },
+    path: "", component: ClientLayoutComponent, data: { breadcrumb: 'Home' }, children: [
+      { path: "", component: HomeComponent },
+      { path: "detail/:id", component: DetailComponent, data: { breadcrumb: 'Detail' } },
+      { path: "watch/:id", component: WatchComponent, data: { breadcrumb: 'Watch' } },
 
-        ]
-      },
-      {
-        path: "admin", component: AdminLayoutComponent, children: [
-          { path: "admin", redirectTo: 'dashboard', pathMatch: 'full' },
+    ]
+  },
+  {
+    path: "admin", component: AdminLayoutComponent, children: [
+      { path: "admin", redirectTo: 'dashboard', pathMatch: 'full' },
 
-        ]
-      }
     ]
   }
-
-
-
 ];
 
 @NgModule({
