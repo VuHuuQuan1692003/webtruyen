@@ -11,11 +11,12 @@ const routes: Routes = [
   {
     path: "", component: ClientLayoutComponent, data: { breadcrumb: 'Home' }, children: [
       { path: "", component: HomeComponent },
-      { path: "detail/:id", component: DetailComponent, data: { breadcrumb: 'Detail' } },
-      { path: "watch/:id", component: WatchComponent, data: { breadcrumb: 'Watch' } },
+      { path: "detail", component: DetailComponent, data: { breadcrumb: 'Detail' } },
+
 
     ]
   },
+  { path: "watch", component: WatchComponent, data: { breadcrumb: 'Watch' } },
   {
     path: "admin", component: AdminLayoutComponent, children: [
       { path: "admin", redirectTo: 'dashboard', pathMatch: 'full' },

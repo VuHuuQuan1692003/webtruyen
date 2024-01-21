@@ -27,6 +27,8 @@ import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { BreadcrumbComponent } from './components/client/breadcrumb/breadcrumb.component';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
+import { NzGridModule } from 'ng-zorro-antd/grid';
 registerLocaleData(vi);
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ registerLocaleData(vi);
     SlickCarouselModule,
     NzBreadCrumbModule,
     NzLayoutModule,
-    NzDividerModule
+    NzDividerModule,
+    NzDropDownModule,
+    NzGridModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: vi_VN }

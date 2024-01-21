@@ -1,0 +1,14 @@
+.grid-scroll {
+    max-height: 297px;
+    overflow-y: auto;
+    margin-top: 50px;
+
+}
+
+.back-ground-ul {
+    background-color: rgb(241, 241, 241);
+}
+
+.back-ground-li {
+    background-color: white;
+}
