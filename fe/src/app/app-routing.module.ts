@@ -6,6 +6,9 @@ import { HomeComponent } from './pages/client/home/home.component';
 import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
 import { WatchComponent } from './pages/client/watch/watch.component';
 import { DetailComponent } from './pages/client/detail/detail.component';
+import { ProductsComponent } from './pages/admin/products/products.component';
+import { UsersComponent } from './pages/admin/users/users.component';
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -20,6 +23,9 @@ const routes: Routes = [
   {
     path: "admin", component: AdminLayoutComponent, children: [
       { path: "admin", redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: "dashboard", component: DashboardComponent },
+      { path: "users", component: UsersComponent },
+      { path: "products", component: ProductsComponent },
 
     ]
   }

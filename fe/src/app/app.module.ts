@@ -29,6 +29,9 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { BreadcrumbComponent } from './components/client/breadcrumb/breadcrumb.component';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzGridModule } from 'ng-zorro-antd/grid';
+import { ProductsComponent } from './pages/admin/products/products.component';
+import { UsersComponent } from './pages/admin/users/users.component';
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 registerLocaleData(vi);
 @NgModule({
   declarations: [
@@ -44,7 +47,10 @@ registerLocaleData(vi);
     AdminLayoutComponent,
     ClientLayoutComponent,
     BannerComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    ProductsComponent,
+    UsersComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

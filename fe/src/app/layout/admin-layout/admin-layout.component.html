@@ -1,1 +1,19 @@
-<p>admin-layout works!</p>
+<div class="flex h-screen bg-gray-100">
+    <div class="w-64 bg-black text-white p-4">
+        <h1 class="text-2xl font-bold mb-4 text-white">Admin Dashboard</h1>
+        <ul class="space-y-2">
+            <li class="hover:bg-gray-700 p-2 rounded transition">
+                <a routerLink="/admin" routerLinkActive="text-yellow-400" class="text-white">Dashboard</a>
+            </li>
+            <li class="hover:bg-gray-700 p-2 rounded transition">
+                <a routerLink="/admin/products" routerLinkActive="text-yellow-400" class="text-white">Products</a>
+            </li>
+            <li class="hover:bg-gray-700 p-2 rounded transition">
+                <a routerLink="/admin/users" routerLinkActive="text-yellow-400" class="text-white">Users</a>
+            </li>
+        </ul>
+    </div>
+    <div class="flex-1 p-8">
+        <router-outlet></router-outlet>
+    </div>
+</div>
